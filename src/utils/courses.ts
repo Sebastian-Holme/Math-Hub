@@ -2,7 +2,7 @@ import { Box, GitBranch, Wifi, CircuitBoard, Code2, BookOpen, TrendingUp, Brain,
 
 const Grid3X3 = Box;
 
-export type View = 'home' | 'hessian' | 'derivation' | 'network' | 'circuit' | 'linear' | 'gradient' | 'neural' | 'economics' | 'algorithm' | 'matrix' | 'linked-list' | 'recursion' | 'distribution' | 'p-value';
+export type View = 'home' | 'hessian' | 'derivation' | 'network' | 'circuit' | 'linear' | 'gradient' | 'neural' | 'economics' | 'algorithm' | 'matrix' | 'linked-list' | 'recursion' | 'distribution' | 'p-value' | 'variable-tracer' | 'number-system' | 'thread-race' | 'sampling';
 
 export interface Tool {
   title: string;
@@ -37,7 +37,7 @@ export const SEMESTERS: Semester[] = [
     courses: [
       {
         code: 'IN1000',
-        name: 'Introduksjon til objektorientert programmering',
+        name: 'Introduksjon til objektorientert programmering og HMS-emner',
         categories: [
           {
             name: 'Algoritmer',
@@ -58,10 +58,10 @@ export const SEMESTERS: Semester[] = [
             tools: [
               {
                 title: 'Variabel-tracker',
-                description: 'Se hvordan variabler endrer seg gjennom en løkke eller if-setning.',
+                description: 'Se hvordan variabler endrer seg steg for steg gjennom løkker, if-setninger og funksjonskall i Python.',
                 icon: Database,
                 color: 'text-green-500',
-                disabled: true
+                view: 'variable-tracer'
               }
             ]
           }
@@ -111,15 +111,15 @@ export const SEMESTERS: Semester[] = [
             ]
           },
           {
-            name: 'Programmering',
+            name: 'Tallrepresentasjon',
             icon: Code2,
             tools: [
               {
-                title: 'Stack-visualisering (Kommer)',
-                description: 'Se hvordan stacken endrer seg under kjøring.',
-                icon: Layers,
+                title: 'Tallrepresentasjon',
+                description: 'Konverter mellom desimal, binær og heksadesimal, og se hvordan totallskomplement fungerer for negative tall.',
+                icon: Calculator,
                 color: 'text-blue-500',
-                disabled: true
+                view: 'number-system'
               }
             ]
           }
@@ -127,7 +127,7 @@ export const SEMESTERS: Semester[] = [
       },
       {
         code: 'MAT1080',
-        name: 'Matematikk for maskinlæring',
+        name: 'Matematisk grunnlag for maskinlæring',
         tools: [
           {
             title: 'Matrix Playground',
@@ -200,10 +200,10 @@ export const SEMESTERS: Semester[] = [
             tools: [
               {
                 title: 'Thread Visualizer',
-                description: 'Se hvordan flere tråder kjører samtidig og forstå synkronisering.',
+                description: 'Se hvordan to tråder som deler en teller kan skape en race condition — og hvordan synkronisering løser det.',
                 icon: Activity,
                 color: 'text-red-500',
-                disabled: true
+                view: 'thread-race'
               }
             ]
           }
@@ -290,10 +290,10 @@ export const SEMESTERS: Semester[] = [
             tools: [
               {
                 title: 'Sampling Simulator',
-                description: 'Se Sentrale Grenseverdisetningen i aksjon gjennom simulering.',
+                description: 'Trekk utvalg fra en skjev populasjon og se Sentralgrensesetningen i aksjon gjennom simulering.',
                 icon: Database,
                 color: 'text-blue-500',
-                disabled: true
+                view: 'sampling'
               }
             ]
           }
@@ -326,20 +326,13 @@ export const SEMESTERS: Semester[] = [
       },
       {
         code: 'IN2160',
-        name: 'Systemprogrammering',
+        name: 'Probabilistisk maskinlæring',
         tools: [
           {
-            title: 'Minnebehandling Lab',
-            description: 'Se hvordan malloc og free fungerer i praksis.',
+            title: 'Bayes-laboratorium',
+            description: 'Utforsk sannsynlighetsmodeller og oppdatering av tro (Bayesiansk inferens).',
             icon: Database,
             color: 'text-purple-500',
-            disabled: true
-          },
-          {
-            title: 'Tråd-visualiserer',
-            description: 'Utforsk rasebetingelser og synkronisering.',
-            icon: Activity,
-            color: 'text-red-500',
             disabled: true
           }
         ]
