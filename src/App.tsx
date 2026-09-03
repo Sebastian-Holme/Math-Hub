@@ -17,6 +17,10 @@ import { LinkedListAnimator } from './components/LinkedListAnimator';
 import { RecursionTracer } from './components/RecursionTracer';
 import { DistributionSandbox } from './components/DistributionSandbox';
 import { PValueVisualizer } from './components/PValueVisualizer';
+import { VariableTracer } from './components/VariableTracer';
+import { NumberSystemLab } from './components/NumberSystemLab';
+import { ThreadRaceLab } from './components/ThreadRaceLab';
+import { SamplingSimulator } from './components/SamplingSimulator';
 
 import { SEMESTERS } from './utils/courses';
 import type { View, Semester } from './utils/courses';
@@ -498,6 +502,10 @@ function App() {
               {currentView === 'recursion' && <RecursionTracer />}
               {currentView === 'distribution' && <DistributionSandbox />}
               {currentView === 'p-value' && <PValueVisualizer />}
+              {currentView === 'variable-tracer' && <VariableTracer />}
+              {currentView === 'number-system' && <NumberSystemLab />}
+              {currentView === 'thread-race' && <ThreadRaceLab />}
+              {currentView === 'sampling' && <SamplingSimulator />}
             </motion.div>
           )}
         </AnimatePresence>
