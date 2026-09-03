@@ -42,7 +42,7 @@ export const Layout: React.FC<LayoutProps & { onNavClick?: (view: 'home' | 'abou
 
           <div className="flex items-center gap-4 hidden md:flex">
             <a
-              href="https://github.com"
+              href="https://github.com/Sebastian-Holme/Math-Hub"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 hover:bg-white/5 rounded-full transition-colors"
@@ -83,4 +83,3 @@ export const Layout: React.FC<LayoutProps & { onNavClick?: (view: 'home' | 'abou
     </div>
   );
 };
-
